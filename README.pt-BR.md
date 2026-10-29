@@ -27,7 +27,15 @@ App de barra de menu do macOS que mostra quanto dos seus limites de uso do Claud
 macOS 14 (Sonoma) ou superior. Para compilar, Swift 5.9+ (as Command Line Tools bastam; Xcode não é necessário).
 
 ## Instalação
-**Por release:** baixe `yacw-<versão>.zip` na página de Releases, descompacte e mova `YACW.app` para Aplicativos. A assinatura é ad-hoc (sem Developer ID da Apple, sem notarização); na primeira vez: clique direito no app > **Abrir** > **Abrir**. Se o macOS ainda recusar uma cópia baixada: `xattr -dr com.apple.quarantine YACW.app`.
+**Por release:** baixe `yacw-<versão>.zip` na página de Releases, descompacte e mova `YACW.app` para Aplicativos.
+
+#### Primeira abertura
+O app tem assinatura ad-hoc, então o macOS bloqueia a primeira abertura em outros Macs. Clique com o botão direito no `YACW.app`, escolha **Abrir** e confirme; ou, no Terminal:
+
+```
+xattr -dr com.apple.quarantine YACW.app
+```
+O YACW não é notarizado pela Apple (exige conta de desenvolvedor paga). O código-fonte é aberto: você pode auditá-lo e compilar localmente (`swift build` / `scripts/bundle.sh`).
 
 **Pelo código:**
 ```

@@ -27,7 +27,15 @@ A macOS menu bar app that shows how much of your Claude usage limits you have us
 macOS 14 (Sonoma) or later. Swift 5.9+ toolchain to build (Command Line Tools are enough; Xcode is not required).
 
 ## Install
-**From a release:** download `yacw-<version>.zip` from the Releases page, unzip, move `YACW.app` to Applications. The app is signed ad hoc (no Apple Developer ID, not notarized), so the first time: right click the app > **Open** > **Open**. If macOS still refuses a downloaded copy: `xattr -dr com.apple.quarantine YACW.app`.
+**From a release:** download `yacw-<version>.zip` from the Releases page, unzip, and move `YACW.app` to Applications.
+
+#### First launch
+The app is signed ad hoc, so macOS blocks the first launch on other Macs. Right click `YACW.app`, choose **Open**, and confirm; or, in Terminal:
+
+```
+xattr -dr com.apple.quarantine YACW.app
+```
+YACW is not notarized by Apple (that requires a paid developer account). The source code is open, so you can audit it and build it yourself (`swift build` / `scripts/bundle.sh`).
 
 **From source:**
 ```
