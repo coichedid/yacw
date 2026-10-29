@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Build
+        run: swift build
+      - name: Unit tests (XCTest wrapper around the selftest)
+        run: swift test
+      - name: Selftest
+        run: swift run yacw-cli selftest
+      - name: Bundle has no build-path dependency
+        run: |
+          ./scripts/bundle.sh
+          ./scripts/check-bundle.sh
+      - name: Privacy check
+        run: ./scripts/privacy-check.sh

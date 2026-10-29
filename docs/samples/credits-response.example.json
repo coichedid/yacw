@@ -1,0 +1,56 @@
+{
+  "amount": 2500,
+  "currency": "USD",
+  "balance": {
+    "money": {
+      "amount_minor": 2500,
+      "currency": "USD",
+      "exponent": 2
+    },
+    "credits": null
+  },
+  "balance_credits": null,
+  "amount_without_scoped_credits": 2500,
+  "auto_reload_settings": null,
+  "auto_reload_disabled_reason": null,
+  "auto_reload_stripe_error_code": null,
+  "pending_invoice_amount_cents": null,
+  "last_paid_purchase_cents": null,
+  "expiry_policy_months": null,
+  "credit_expiry_policy": null,
+  "auto_reload_terms_banner": null,
+  "tranches": [
+    {
+      "remaining_amount_minor_units": 2500,
+      "currency": "USD",
+      "expires_at": null,
+      "granted_amount_minor_units": 5000,
+      "granted_at": "2030-01-01T12:00:00Z",
+      "remaining": {
+        "money": {
+          "amount_minor": 2500,
+          "currency": "USD",
+          "exponent": 2
+        },
+        "credits": null
+      },
+      "granted": {
+        "money": {
+          "amount_minor": 5000,
+          "currency": "USD",
+          "exponent": 2
+        },
+        "credits": null
+      },
+      "program_id": "prepaid_additional_usage_individual",
+      "name": null,
+      "id": "00000000-0000-4000-8000-000000000000",
+      "scope": {
+        "kind": "unscoped",
+        "applies_to": []
+      }
+    }
+  ],
+  "promo_tranches": [],
+  "next_expires_at": null
+}

@@ -1,0 +1,15 @@
+.build/
+.swiftpm/
+*.app
+dist/
+DerivedData/
+.DS_Store
+docs/samples/private/
+state.json
+debug.log
+compare.log
+schedules.json
+usage-url.txt
+credits-url.txt
+*.sqlite
+.privacy-terms
