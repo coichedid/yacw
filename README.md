@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/images/icon.png" alt="YACW icon" width="96"></p>
+
 # YACW
 
 **Yet Another Claude Watcher — a macOS menu bar meter for Claude usage limits**
